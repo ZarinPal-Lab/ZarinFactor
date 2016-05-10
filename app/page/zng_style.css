@@ -1,0 +1,164 @@
+/* ZarinPal New Gateway StyleSheet */
+
+/* Font */
+@font-face {
+font-family: 'IranSans';
+src: url('font/IranSans.eot?#') format('eot'),
+url('font/IranSans.ttf') format('truetype'),
+url('font/IranSans.woff') format('woff');
+}
+
+*{
+font-family:'IranSans',Sans-Serif;
+font-size: 14px;
+}
+
+/* Custom Style */
+
+.clearfix {
+clear: both;
+}
+
+body {
+background-image: url("img/bg.png");
+}
+
+#container {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,cccccc+100 */
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+width: 400px;
+height: auto;
+padding: 10px 20px 10px 20px;
+position: absolute;
+top: 50%;
+left: 50%;
+overflow: auto;
+transform: translate(-50%, -50%);
+border: 1px solid #cccccc;
+border-radius: 15px;
+-moz-box-shadow: -1px 10px 75px #cccccc;
+-webkit-box-shadow: -1px 10px 75px #cccccc;
+box-shadow: -1px 10px 75px #cccccc;
+}
+
+#container .logoarea {
+width: 200px;
+height: auto;
+margin: auto;
+}
+
+#container hr {
+background: #eeeeee;
+width: auto;
+height: 1px;
+}
+
+#container .text {
+width: 250px;
+margin: auto;
+}
+
+#container form.zng_form input[type="text"] {
+width: 100%;
+margin: 5px 0 5px 0;
+padding: 5px;
+border: 1px solid #cccccc;
+border-radius: 10px;
+}
+
+#container form.zng_form input[type="submit"] {
+background: #F9BF3B;
+width: 100%;
+margin: 5px 0 5px 0;
+text-align: center;
+color: #ffffff;
+padding: 10px;
+border: 1px solid #cccccc;
+border-radius: 10px;
+}
+
+#container form.zng_form_pay input[type="text"] {
+width: 100%;
+padding: 5px;
+border: 1px solid #cccccc;
+}
+
+#container form.zng_form_pay input[type="submit"] {
+background: #F9BF3B;
+width: 100%;
+text-align: center;
+color: #ffffff;
+padding: 10px;
+border: 1px solid #cccccc;
+}
+
+table.zng_id_table {
+width: 100%;
+}
+
+table.zng_id_table tr td.top {
+background: #F9BF3B;
+width: 40%;
+color: #ffffff;
+padding: 5px;
+}
+
+table.zng_id_table tr td {
+background: #eeeeee;
+width: auto;
+color: #000000;
+padding: 5px;
+}
+
+.zng_pay {
+background: #F9BF3B;
+width: 100%;
+text-align: center;
+color: #ffffff;
+padding: 5px;
+border: 1px solid #cccccc;
+}
+
+button.zng_pay#paid {
+background: #16A085;
+width: 100%;
+text-align: center;
+color: #ffffff;
+padding: 5px;
+border: 1px solid #cccccc;
+}
+
+button.zng_pay#error {
+background: #D73C2C;
+width: 100%;
+text-align: center;
+color: #ffffff;
+padding: 5px;
+border: 1px solid #cccccc;
+}
+
+.note#error {
+background: #D73C2C;
+width: auto;
+height: auto;
+padding: 5px;
+color: #ffffff;
+border-radius: 15px;
+text-align: center;
+margin-bottom: 5px;
+}
+
+.note#paid {
+background: #16A085;
+width: auto;
+height: auto;
+padding: 5px;
+color: #ffffff;
+border-radius: 15px;
+text-align: center;
+margin-bottom: 5px;
+}
