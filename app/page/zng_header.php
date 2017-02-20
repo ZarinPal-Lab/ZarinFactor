@@ -1,5 +1,6 @@
 <html dir="rtl" lang="fa">
 			<head>
+				<meta charset="utf-8"/>
 				<title><?php echo $zng_title; ?></title>
 				<link href="app/page/zng_style.css" type="text/css" rel="stylesheet" />
 			</head>
