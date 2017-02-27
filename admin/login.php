@@ -22,6 +22,7 @@ elseif(!empty($_POST[username])) {
 ?>
 <html dir="rtl" lang="fa">
 			<head>
+				<meta charset="utf-8"/>
 				<title>پنل مدیریت</title>
 				<link href="style.css" type="text/css" rel="stylesheet" />
 			</head>
