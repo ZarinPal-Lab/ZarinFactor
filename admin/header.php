@@ -10,6 +10,7 @@ if($_SESSION['logintemp']!='1') { header("location: login.php"); }
 ?>
 <html dir="rtl" lang="fa">
 			<head>
+				<meta charset="utf-8"/>
 				<title>پنل مدیریت</title>
 				<link href="style.css" type="text/css" rel="stylesheet" />
 			</head>
