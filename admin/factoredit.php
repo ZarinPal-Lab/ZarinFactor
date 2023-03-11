@@ -1,8 +1,12 @@
 <?php
 include("header.php");
-$zng_fg = mysql_query("SELECT * FROM zng_factor WHERE ID='$_GET[id]' ");
-while($row = mysql_fetch_array($zng_fg))
+//$zng_fg = mysql_query("SELECT * FROM zng_factor WHERE ID='$_GET[id]' ");
+$query = "SELECT * FROM zng_factor WHERE ID =".$_GET['id'];
+$zng_fg = mysqli_query($zng_info_data, $query);
+
+while($row = mysqli_fetch_assoc($zng_fg))
 {
+
 $zng_id = $row['ID'];
 $zng_from = $row['from'];
 $zng_to = $row['to'];
@@ -23,11 +27,12 @@ switch($zng_status) {
 	case "paid":
 	$zng_status_persian = 'پرداخت شده';
 	break;
-}
 	
 }
 
-switch($_GET[action]) {
+}
+
+switch($_GET['action']) {
 	case "full":
 	echo '
 <table class="zng_id_table">
@@ -158,7 +163,7 @@ switch($_GET[action]) {
 	
 	case "delete":
 	if(!empty($zng_ref)) { echo 'شما نمی توانید فاکتوری که پرداخت شده است را حذف کنید'; }
-	else { echo 'فاکتور مورد نظر با موفقیت حذف شد'; mysql_query("DELETE FROM `zng_factor` WHERE ID='$_GET[id]' "); }
+	else { echo 'فاکتور مورد نظر با موفقیت حذف شد'; mysqli_query($zng_info_data,"DELETE FROM `zng_factor` WHERE ID=".$_GET['id']); }
 	break;
 }
 
