@@ -30,4 +30,7 @@ $zng_web_address = $row['webaddress'];
 //JDF
 $zng_date = jdate('o/n/j','','','','en');
 $zng_date_compare = jdate('onj','','','','en');
+$ZarinGate=false;
+$SandBox=true;
+
 
