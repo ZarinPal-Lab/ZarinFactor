@@ -1,6 +1,10 @@
 <?php
+
 include("header.php");
-$zng_fg = mysql_query("SELECT * FROM zng_factor");
+
+//$zng_fg = mysql_query("SELECT * FROM zng_factor");
+$query = "SELECT * FROM zng_factor";//edited 1401/12/18 Ali
+$zng_fg = mysqli_query($zng_info_data, $query);//edited 1401/12/18 Ali
 echo '
 <ul class="zng_menu">
 <a href="addfactor.php"><li>اضافه کردن فاکتور جدید</li></a>
@@ -24,7 +28,7 @@ echo '
 <td class="top" style="text-align: center;">عملیات</td>
 </tr>
 ';
-while($row = mysql_fetch_array($zng_fg))
+while($row = mysqli_fetch_assoc($zng_fg))//edited 1401/12/18 Ali
 {
 $zng_id = $row['ID'];
 $zng_from = $row['from'];
@@ -66,8 +70,5 @@ echo '
 	
 }
 echo '</table>';
-?>
 
-
-
-<?php include("footer.php"); ?>
+include("footer.php");

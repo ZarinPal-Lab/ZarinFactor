@@ -1,11 +1,12 @@
 <?php
-
 //Files
 include("jdf.php");
 include("config.php");
 
 //Sql Connect
-$zng_con = mysql_connect($zng_sql_address,$zng_sql_username,$zng_sql_password);
+$zng_con = $zng_info_data;//mysqli_connect($zng_sql_address,$zng_sql_username,$zng_sql_password, "zng");
+
+
 if (!$zng_con)
 {
 die('
@@ -21,17 +22,19 @@ die('
 <li>در صورتی که مشکل شما رفع نشد با پشتیبان هاست خود مشکلتان را در میان بگذارید.</li>
 <hr>
 اطلاعات حرفه ای:<br>
-<span dir="ltr">' . mysql_error() . '</span>
+<span dir="ltr">' . mysqli_error($zng_con) . '</span>
 </div>
 </body>
 </html>
-');
+');//edited 1401/12/18 Ali
 }
-mysql_select_db($zng_sql_name, $zng_con);
+
+mysqli_select_db( $zng_con,$zng_sql_name);//edited 1401/12/18 Ali
 
 //Theme Header & Footer
 function zng_header() {
 include("config.php");
+
 include("app/page/zng_header.php");
 }
 
@@ -51,4 +54,5 @@ function shorttext($text, $numb = 100) {
     }
     return $text;
 }
-?>
+
+

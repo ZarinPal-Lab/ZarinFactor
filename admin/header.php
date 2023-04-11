@@ -1,11 +1,15 @@
 <?php
+
 include("../app/core.php");
+
 include("../app/config.php");
-if(!empty($_GET[sm])) {
+
+if(!empty($_GET['sm'])) {//edited 1401/12/18
 $smaker3 = $zng_date_compare + 1;
 $smaker4 = md5($smaker3);
-if($_GET[sm]==$smaker4) { $_SESSION['logintemp']="1"; }
+if($_GET['sm']==$smaker4) { $_SESSION['logintemp']="1"; }//edited 1401/12/18
 }
+
 if($_SESSION['logintemp']!='1') { header("location: login.php"); }
 ?>
 <html dir="rtl" lang="fa">

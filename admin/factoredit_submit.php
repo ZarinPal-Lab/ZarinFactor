@@ -1,7 +1,9 @@
 <?php
 include("header.php");
-$zng_fg = mysql_query("SELECT * FROM zng_factor WHERE ID='$_GET[id]' ");
-while($row = mysql_fetch_array($zng_fg))
+//$zng_fg = mysql_query("SELECT * FROM zng_factor WHERE ID='$_GET[id]' ");
+$query = "SELECT * FROM zng_factor WHERE ID =".$_GET['id'];
+$zng_fg = mysqli_query($zng_info_data, $query);
+while($row = mysqli_fetch_assoc($zng_fg))
 {
 $zng_id = $row['ID'];
 $zng_from = $row['from'];
@@ -29,9 +31,14 @@ switch($zng_status) {
 
 if(!empty($zng_ref)) { header("location: index.php"); }
 else {
-		mysql_query("UPDATE `zng_factor` SET `from`='$_POST[from]',`to`='$_POST[to]', `for`='$_POST[for]', `paytime`='$_POST[paytime]', `price`='$_POST[price]', `description`='$_POST[desc]' WHERE ID='1'");
+
+$query="UPDATE zng_factor SET `from`='".$_POST['from']."', `to`='".$_POST['to']."', `for`='".$_POST['for']."', `paytime`='".$_POST['paytime']."', `price`='".$_POST['price']."', `description`='".$_POST['desc']."' WHERE `ID`=".$_GET['id'];
+
+		mysqli_query($zng_info_data,$query);
 		echo 'فاکتور مورد نظر با موفقیت ویرایش شد.';
+
 }
 
 include("footer.php");
-?>
+
+

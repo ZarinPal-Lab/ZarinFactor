@@ -6,9 +6,11 @@ else { $zng_fac_id = $_GET['id']; }
 if(empty($zng_fac_id)) { header("location: ?index=index&error=1"); }
 else {
 
-$zng_fg = mysql_query("SELECT * FROM zng_factor WHERE ID='$zng_fac_id'");
-if(mysql_num_rows($zng_fg) < 1) { header("location: ?index=index&error=2"); }
-while($row = mysql_fetch_array($zng_fg))
+//$zng_fg = mysql_query("SELECT * FROM zng_factor WHERE ID='$zng_fac_id'");
+$query = "SELECT * FROM zng_factor WHERE ID =".$zng_fac_id;
+$zng_fg = mysqli_query($zng_info_data, $query);
+if(mysqli_num_rows($zng_fg) < 1) { header("location: ?index=index&error=2"); }
+while($row = mysqli_fetch_assoc($zng_fg))
 {
 $zng_id = $row['ID'];
 $zng_from = $row['from'];

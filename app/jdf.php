@@ -558,6 +558,7 @@ Copyright(C)2015 JDF.SCR.IR : [ http://jdf.scr.ir/jdf ] version 2.60
 
 /*	F	*/
 function gregorian_to_jalali($gy,$gm,$gd,$mod=''){
+
 	$gy=tr_num($gy); $gm=tr_num($gm); $gd=tr_num($gd);/* <= Extra :اين سطر ، جزء تابع اصلي نيست */
  $g_d_m=array(0,31,59,90,120,151,181,212,243,273,304,334);
  $jy=($gy<=1600)?0:979;

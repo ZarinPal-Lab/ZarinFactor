@@ -1,7 +1,9 @@
 <?php
 include("header.php");
-$zng_fg = mysql_query("SELECT * FROM zng_system WHERE ID='1' ");
-while($row = mysql_fetch_array($zng_fg)) {
+//$zng_fg = mysql_query("SELECT * FROM zng_system WHERE ID='1' ");//edited 1401/12/18
+$query = "SELECT * FROM zng_system WHERE ID =1";//edited 1401/12/18
+$zng_fg = mysqli_query($zng_info_data, $query);//edited 1401/12/18
+while($row = mysqli_fetch_assoc($zng_fg)) {//edited 1401/12/18
 $title = $row['title'];
 $merchant = $row['merchant'];
 $webaddress = $row['webaddress'];

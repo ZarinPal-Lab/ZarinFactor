@@ -4,10 +4,13 @@ if($_SESSION['logintemp']=="1") { header("location: index.php"); }
 include("../app/core.php");
 include("../app/config.php");
 
-if($_POST[username]=="admin") {
-	
-$zng_fg = mysql_query("SELECT * FROM zng_system WHERE ID='1' ");
-while($row = mysql_fetch_array($zng_fg)) {
+
+if($_POST['username']=="admin") {//edited 1401/12/18
+
+$query = "SELECT * FROM zng_system WHERE ID =1";//edited 1401/12/18
+$zng_fg = mysqli_query($zng_info_data, $query);//edited 1401/12/18
+
+while($row = mysqli_fetch_assoc($zng_fg)) {//edited 1401/12/18
 $adminpassword = $row['adminpass'];
 }
 
@@ -16,9 +19,11 @@ if($password_enter==$adminpassword) { $smaker = $zng_date_compare + 1; $smaker2 
 else { $note = '<div class="note" id="error">نام کاربری یا رمز عبور اشتباه است.</div>'; }
 
 }
-elseif(!empty($_POST[username])) {
+elseif(!empty($_POST['username'])) {//edited 1401/12/18
+
 	$note = '<div class="note" id="error">نام کاربری یا رمز عبور اشتباه است.</div>';
 }
+
 ?>
 <html dir="rtl" lang="fa">
 			<head>
