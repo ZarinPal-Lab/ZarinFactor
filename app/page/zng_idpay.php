@@ -42,7 +42,8 @@ switch($zng_status) {
 	
 }
 
-	if($zng_status=="paid" && $_GET['ref']!="") {
+//	if($zng_status=="paid" && $_GET['ref']!="") {
+	if($zng_status=="paid" && $zng_ref !="") {
 		echo '
 		<div class="note" id="paid">با تشکر از پرداخت شما. فاکتور شما به حالت پرداخت شده تغییر داده شد و اطلاعات شما ثبت شد. جهت پیگیری های بعدی کد تراکنش زیر را یادداشت:<br>' . $zng_ref . '</div>
 		';

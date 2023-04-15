@@ -1,3 +1,6 @@
+<?php
+	include("app/config.php");
+?>
 <html dir="rtl" lang="fa">
 			<head>
 				<meta charset="utf-8"/>
