@@ -141,7 +141,7 @@ switch($_GET['action']) {
 	</tr>
 
 	<tr>
-	<td class="top">مبلغ</td>
+	<td class="top">مبلغ(تومان)</td>
 	<td><input type="text" value="' . $zng_price . '" name="price" required/></td>
 	</tr>
 	

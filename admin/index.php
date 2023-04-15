@@ -21,7 +21,7 @@ echo '
 <td class="top" style="text-align: center;">بابت</td>
 <td class="top" style="text-align: center;">تاریخ ایجاد</td>
 <td class="top" style="text-align: center;">مهلت پرداخت ( تا )</td>
-<td class="top" style="text-align: center;">قیمت</td>
+<td class="top" style="text-align: center;">قیمت(تومان)</td>
 <td class="top" style="text-align: center;">توضیحات</td>
 <td class="top" style="text-align: center;">وضعیت</td>
 <td class="top" style="text-align: center;">کد تراکنش</td>

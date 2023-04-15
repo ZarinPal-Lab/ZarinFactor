@@ -4,8 +4,8 @@ if($_SESSION['logintemp']=="1") { header("location: index.php"); }
 include("../app/core.php");
 include("../app/config.php");
 
-
-if($_POST['username']=="admin") {//edited 1401/12/18
+$note ='';
+if(isset($_POST['username']) && $_POST['username']==="admin") {//edited 1401/12/18
 
 $query = "SELECT * FROM zng_system WHERE ID =1";//edited 1401/12/18
 $zng_fg = mysqli_query($zng_info_data, $query);//edited 1401/12/18

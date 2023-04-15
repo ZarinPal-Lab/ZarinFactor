@@ -29,7 +29,7 @@ include("header.php");
 	</tr>
 
 	<tr>
-	<td class="top">مبلغ</td>
+	<td class="top">مبلغ(تومان)</td>
 	<td><input type="text" value="" name="price" required/></td>
 	</tr>
 	
