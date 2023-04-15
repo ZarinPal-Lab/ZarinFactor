@@ -1,5 +1,4 @@
 <?php
-	
 	include("app/config.php");
 	require_once("zarinpal_function.php");
 	//Factor Get
