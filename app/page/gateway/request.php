@@ -33,6 +33,7 @@
 	$MerchantID = $zng_zarinpal_mc; //Required
 	$Amount = $zng_price; //Amount will be based on Toman  - Required
 	$Description = 'پرداخت فاکتور شماره:' . $zng_id;  // Required
+	//exit('<p>'.$Description.'</p>');
 	$Email = $_POST['u_email']; // Optional
 	$Mobile = $_POST['u_phone']; // Optional
 	$u_info_array = array("u_email"=>$_POST['u_email'],"u_phone"=>$_POST['u_phone']);
@@ -40,6 +41,7 @@
 	$u_info_base = base64_encode($u_info_json);
 	$CallbackURL = $zng_web_address . '?index=verify&id=' . $_POST['id'] . '&u_info=' . $u_info_base;  // Required
 
+//	exit('<p>'.$CallbackURL.'</p>');
 	// URL also Can be https://ir.zarinpal.com/pg/services/WebGate/wsdl
 
 	$zp 	= new zarinpal();

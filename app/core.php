@@ -30,10 +30,11 @@ die('
 }
 
 mysqli_select_db( $zng_con,$zng_sql_name);//edited 1401/12/18 Ali
+mysqli_query($zng_info_data, "SET NAMES utf8");
 
 //Theme Header & Footer
 function zng_header() {
-include("config.php");
+//include("config.php");
 
 include("app/page/zng_header.php");
 }
